@@ -1,6 +1,6 @@
 # FDM_Extended_ACL
 
-This POSTMAN Collection shows the FDM Extended ACL requests, like 
+This POSTMAN Collection shows the FDM Extended ACL example requests, like 
 ```
 POST FDM Auth
 GET ExtendedAccessList
@@ -17,4 +17,4 @@ And after:
 
 Please create the necessary environment parameters:
 
-![parameter](env.png)
+![Environment](env.png)
