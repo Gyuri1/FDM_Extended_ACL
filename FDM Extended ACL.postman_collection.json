@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "a8db968c-3761-4f1e-8d81-dbd1e241653e",
+		"name": "FDM Extended ACL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FDM auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"access-token\", pm.response.json().access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"grant_type\": \"password\",\n  \"username\": \"{{fdm_admin}}\",\n  \"password\": \"{{fmd_password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{fdm_host}}/api/fdm/v6/fdm/token",
+					"protocol": "https",
+					"host": [
+						"{{fdm_host}}"
+					],
+					"path": [
+						"api",
+						"fdm",
+						"v6",
+						"fdm",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ExtendedAccessList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{fdm_host}}/api/fdm/v6/object/extendedaccesslists",
+					"protocol": "https",
+					"host": [
+						"{{fdm_host}}"
+					],
+					"path": [
+						"api",
+						"fdm",
+						"v6",
+						"object",
+						"extendedaccesslists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ExtendedAccessList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"test1\",\n  \"description\": \"test\",\n  \"entries\": [\n    {\n      \"action\": \"PERMIT\",\n      \"sourceNetworks\": [\n        {\n          \"type\": \"networkobject\" , \n          \"name\": \"any-ipv4\"\n        }\n      ],\n      \"destinationNetworks\": [\n        {\n          \"type\": \"networkobject\",  \n          \"name\": \"any-ipv4\"\n        }\n      ],\n      \"sourcePorts\": [],\n      \"destinationPorts\": [\n        {\n        \"name\": \"HTTPS\",\n        \"type\": \"tcpportobject\"\n        }\n      ],\n      \"logging\": \"DEFAULT\",\n       \"logLevel\": null,\n       \"logInterval\": null,\n      \"type\": \"extendedaccessentry\"\n    }\n  ],\n  \"type\": \"extendedaccesslist\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{fdm_host}}/api/fdm/v6/object/extendedaccesslists",
+					"protocol": "https",
+					"host": [
+						"{{fdm_host}}"
+					],
+					"path": [
+						"api",
+						"fdm",
+						"v6",
+						"object",
+						"extendedaccesslists"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenType",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "access-token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
