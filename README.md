@@ -13,8 +13,8 @@ Before the POSTMAN Collection run:
 
 And after: 
 
-![After](after.png)
+![After](after.jpg)
 
 Please create the necessary environment parameters:
 
-![Environment](env.png)
+![Environment](env.jpg)
