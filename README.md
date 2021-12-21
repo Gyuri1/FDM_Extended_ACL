@@ -9,5 +9,8 @@ POST ExtendedAccessList
 
 Before the POSTMAN Collection run:
 
+![Screenshot](before.png)
 
 And after: 
+
+![Screenshot](after.png)
