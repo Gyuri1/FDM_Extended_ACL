@@ -15,6 +15,6 @@ And after:
 
 ![After](after.jpg)
 
-Please create the necessary environment variables:
+Please create the necessary environment variables before running the requests:
 
 ![Environment](env.jpg)
