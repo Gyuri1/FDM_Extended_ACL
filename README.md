@@ -9,8 +9,12 @@ POST ExtendedAccessList
 
 Before the POSTMAN Collection run:
 
-![Screenshot](before.png)
+![Before](before.png)
 
 And after: 
 
-![Screenshot](after.png)
+![After](after.png)
+
+Please create the necessary environment parameters:
+
+![parameter](env.png)
