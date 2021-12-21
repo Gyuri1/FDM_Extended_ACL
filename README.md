@@ -15,6 +15,6 @@ And after:
 
 ![After](after.jpg)
 
-Please create the necessary environment parameters:
+Please create the necessary environment variables:
 
 ![Environment](env.jpg)
