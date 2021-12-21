@@ -9,7 +9,7 @@ POST ExtendedAccessList
 
 Before the POSTMAN Collection run:
 
-![Before](before.png)
+![Before](before.jpg)
 
 And after: 
 
