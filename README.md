@@ -5,6 +5,8 @@ This POSTMAN Collection shows the FDM Extended ACL example requests, like
 POST FDM Auth
 GET ExtendedAccessList
 POST ExtendedAccessList
+GET NetworkObjects
+POST NetworkObject
 ```
 
 Before the POSTMAN Collection run:
